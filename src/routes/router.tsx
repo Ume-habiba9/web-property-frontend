@@ -7,7 +7,7 @@ import Layout from 'components/layout/layout';
 import ErrorBoundary from 'routes/error-boundary';
 
 import Home from 'pages/home/home';
-
+import AboutUs from 'pages/about/about_us';
 import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
 
@@ -19,7 +19,7 @@ function AppRoutes() {
     createRoutesFromElements(
       <Route element={<Layout />} errorElement={<ErrorBoundary />}>
         <Route path='/home' element={<Home />} />
-
+        <Route path='/about-us' element={<AboutUs />} />
         <Route path='logout' element={<SignOut />} />
 
         {currentUser ? (
