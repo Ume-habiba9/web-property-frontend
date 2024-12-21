@@ -33,6 +33,7 @@ export default {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
+        secondary: '#1C1C1E',
       },
       fontFamily: {
         primary: ['Pangea Afrikan Text Trial', 'sans-serif'],
