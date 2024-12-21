@@ -38,6 +38,7 @@ export default {
         primary: ['Pangea Afrikan Text Trial', 'sans-serif'],
         secondary: ['Circular Std Book', 'sans-serif'],
       },
+
       screens: {
         xsm: '375px',
         sm: '480px',

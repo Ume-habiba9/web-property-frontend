@@ -33,7 +33,7 @@ function SocialFooterSection() {
       </Container>
       <Divider />
       <Container>
-        <div className='flex-centered opacity-50 text-[#1C1C1E] text-lg pb-8 pt-2'>Copyright © 2024 IVYHOLD</div>
+        <div className='flex-centered opacity-50 text-[#1C1C1E] text-lg pb-8 pt-2npm '>Copyright © 2024 IVYHOLD</div>
       </Container>
     </div>
   );

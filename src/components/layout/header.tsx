@@ -26,9 +26,9 @@ export default function Header() {
   }, [isDrawerOpen]);
 
   return (
-    <div className='sticky top-0 z-50 shadow-md'>
+    <div className='sticky top-0 z-50 shadow-md header-style'>
       <Banner />
-      <div className='max-w-[1650px] mx-auto md:px-12 px-5 header-style'>
+      <div className='max-w-[1650px] mx-auto md:px-12 px-5 '>
         <header className='flex md:justify-evenly justify-between items-center py-6 gap-2'>
           <div className='flex-centered lg:gap-4 gap-2'>
             <div className='flex items-end justify-start text-end space-y-0 leading-none lg:text-2xl text-xl font-bold'>

@@ -67,3 +67,7 @@ p {
   background: rgba(0, 0, 0, 0.29);
   letter-spacing: -0.487px;
 }
+
+.bg-gradient-primary {
+  background: linear-gradient(80deg, #7d151e -32.23%, #fd1e28 111.4%);
+}
