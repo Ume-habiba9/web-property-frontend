@@ -5,6 +5,7 @@ import Stats from "./components/stats"
 import QueriesSection from "./components/queriesSection"
 import ConsultantsSection from "components/layout/components/consultants-section"
 import NewsletterSection from "components/layout/components/newsletter-section"
+import BlogSection from "components/layout/components/blog-section"
 function AboutUs() {
   return (
     <div>
@@ -26,6 +27,7 @@ function AboutUs() {
       <Stats />
       <QueriesSection />
       <ConsultantsSection />
+      <BlogSection/>
       <NewsletterSection />
     </div>
   )

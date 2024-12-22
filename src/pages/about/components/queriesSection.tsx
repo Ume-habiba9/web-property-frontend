@@ -22,7 +22,7 @@ function QueriesSection() {
             name="fullName"
           >
             <Input placeholder="John Doe"
-              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-gray-400 bg-transparent" />
+              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent" />
           </Form.Item>
           <Form.Item
             label={<span className="text-white">Phone Number</span>}
@@ -31,7 +31,7 @@ function QueriesSection() {
               { pattern: /^\+?\d{1,4}[\d\s]+$/, message: 'Invalid phone number' },
             ]}
           >
-            <Input  placeholder="+123 456 78910"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-gray-400 bg-transparent" />
+            <Input  placeholder="+123 456 78910"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent" />
           </Form.Item>
           <Form.Item
             label={<span className="text-white">Email</span>}
@@ -41,7 +41,7 @@ function QueriesSection() {
               { type: 'email', message: 'Invalid email address' },
             ]}
           >
-            <Input placeholder="john@example.com"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-gray-400 bg-transparent"/>
+            <Input placeholder="john@example.com"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent"/>
           </Form.Item>
           <Form.Item
             label={<span className="text-white">Query</span>}
@@ -50,7 +50,7 @@ function QueriesSection() {
           >
             <Input.TextArea
               placeholder="Enter your query here..."
-              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-gray-400 bg-transparent"
+              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent"
                             rows={4}
             />
           </Form.Item>
