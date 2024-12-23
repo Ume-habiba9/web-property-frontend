@@ -1,3 +1,5 @@
+import Button from 'components/core-ui/button/button';
+
 import MailIcon from 'assets/icons/MailIcon.png';
 import PeopleIcon from 'assets/icons/people.png';
 import phoneIcon from 'assets/icons/phoneIcon.png';
@@ -27,19 +29,19 @@ function ConsultantsSection() {
     },
   ];
   return (
-    <section className='p-9 text-center'>
-      <h2 className=' text-center  text-5xl font-bold'>Meet the consultant</h2>
-      <p className='py-4 text-[#8E8E93] font-sm'>
+    <section className='py-24 text-center'>
+      <h2 className=' text-center font-primary text-5xl font-bold'>Meet the consultant</h2>
+      <p className='py-6 text-[#8E8E93] font-primary'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo
       </p>
-      <div className='flex flex-row items-center justify-center gap-9 my-4'>
+      <div className='flex-centered flex-row gap-9 my-8'>
         {ConsultantsData.map((consultant) => (
           <div key={consultant.id}>
             <img src={consultant.image} alt='' />
-            <div className='py-3 flex justify-between'>
-              <div className='p-2'>
-                <p>{consultant.name}</p>
-                <p className='text-[#8E8E93]'>{consultant.designation}</p>
+            <div className='py-4 pr-2 flex justify-between'>
+              <div className='p-2 text-start'>
+                <p className='font-primary font-medium text-lg'>{consultant.name}</p>
+                <p className='text-[#8E8E93] font-primary'>{consultant.designation}</p>
               </div>
               <div className='flex flex-row gap-2'>
                 <img src={phoneIcon} alt='' />
@@ -49,17 +51,21 @@ function ConsultantsSection() {
           </div>
         ))}
       </div>
-      <div className=' w-[75%] rounded-3xl mx-auto flex flex-row align-center justify-between bg-[#FD1E2812] p-7'>
+      <div className=' w-[75%] mt-20 rounded-3xl mx-auto flex flex-row justify-between bg-[#FD1E2812] py-8 px-12'>
         <div className='flex align-center items-center space-x-4'>
           <img className='bg-white p-2 rounded-full' src={PeopleIcon} alt='' />
           <div className='p-2 leading-9 text-start'>
-            <h2 className='font-medium text-2xl'>Let Expert realtors Guids you.</h2>
-            <p className='text-[#8E8E93] text-lg'>Don’t know where to start? Get an expert consultation!</p>
+            <h2 className='font-medium text-2xl font-primary'>Let Expert realtors Guids you.</h2>
+            <p className='font-primary text-[#8E8E93] text-base'>
+              Don’t know where to start? Get an expert consultation!
+            </p>
           </div>
         </div>
-        <button className='bg-primary text-white md:text-xl font-normal px-11  rounded-lg md:font-medium  text-sm'>
-          Contact Us
-        </button>
+        <div className='flex-centered'>
+          <Button variant='primary' className='text-lg font-medium font-primary rounded-lg  px-12 py-3'>
+            Contact Us
+          </Button>
+        </div>
       </div>
     </section>
   );
