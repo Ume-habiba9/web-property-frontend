@@ -1,67 +1,94 @@
-import statsbg from 'assets/images/statsbg.svg'
-import icon1 from 'assets/icons/Icon(1).png'
-import icon2 from 'assets/icons/Icon(2).png'
+import Container from 'components/core-ui/container/container';
 
+import icon1 from 'assets/icons/Icon(1).png';
+import icon2 from 'assets/icons/Icon(2).png';
+import statsbg from 'assets/images/statsbg.svg';
 
-interface StatsData {
-    ReturnRate: number;
-    properties: number;
-    Transactions: number;
-}
+const data = [
+  {
+    key: 1,
+    image: icon1,
+    heading: 'Meet your local luxury agent',
+    text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .',
+  },
+  {
+    key: 2,
+    image: icon2,
+    heading: 'Get Expert consultation',
+    text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .',
+  },
+];
+
+const stats = [
+  {
+    key: 1,
+    stat: 7.4,
+    text: 'Property Return Rate',
+  },
+  {
+    key: 2,
+    stat: 3856,
+    text: 'Property in Sell & Rent',
+  },
+  {
+    key: 3,
+    stat: 2540,
+    text: 'Daily Completed Transactions',
+  },
+];
 function Stats() {
-    // Hardcoded stats data
-    const stats: StatsData = {
-        ReturnRate: 7.4,
-        properties: 3856,
-        Transactions: 2540,
-    };
-    const formatNumber = (num: number): string => num.toLocaleString("en-US");
-    return (
-        <div className='relative h-screen w-screen bg-cover bg-center flex flex-col items-center justify-center gap-4'
-            style={{
-                backgroundImage: `url(${statsbg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-            }}>
-            <div className='flex flex-row align-center gap-9 py-9 justify-between px-28'>
-                <h2 className='font-bold text-2xl w-8/12'>
-                    The highest level of service from IVYHOLD's best agents
-                </h2>
-                <p className=' w-2/3 font-normal text-xl'>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus sit natoque eget mattis magna.</p>
-            </div>
-            <div className='flex flex-row align-center gap-56 py-9 px-28'>
-                <div className='flex flex-row bg-white rounded-3xl p-6  w-1/3'>
-                    <div>
-                        <img className='' src={icon1} alt="" /></div>
-                    <div>
-                        <h3 className='font-bold text-xl font-bold text-xl p-4'>
-                            Meet your local luxury agent</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .</p>            </div>
+  // Hardcoded stats data
 
-                </div>
-                <div className=' p-6 leading-9 text-white bg-primary rounded-3xl w-1/3'>
-                    <img src={icon2} alt="" />
-                    <h3 className='font-bold text-xl'>Get Expert consultation</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .</p>
-                </div>
-            </div>
-            <section>
-                <div className="grid grid-cols-3 divide-x-4 divide-black  p-9   text-center align-center ">
-                    <div className="">
-                        <p className="text-5xl font-bold">{formatNumber(stats.ReturnRate)}%</p>
-                        <p>Property Return Rate</p>
-                    </div>
-                    <div className="px-9">
-                        <p className="text-5xl font-bold">{formatNumber(stats.properties)}</p>
-                        <p>Property in Sell & Rent</p>
-                    </div>
-                    <div className=" text-center px-9">
-                        <p className="text-5xl font-bold">{formatNumber(stats.Transactions)}</p>
-                        <p>Daily Completed Transactions</p>
-                    </div>
-                </div>
-            </section>
+  const formatNumber = (num: number): string => num.toLocaleString('en-US');
+  return (
+    <div
+      className='relative bg-cover bg-center py-20'
+      style={{
+        backgroundImage: `url(${statsbg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}
+    >
+      <Container>
+        <div className='flex flex-row gap-15 items-center justify-center'>
+          <h2 className='font-bold text-5xl font-primary max-w-[50%]'>
+            The highest level of service from IVYHOLD's best agents
+          </h2>
+          <p className='font-normal text-lg font-primary max-w-[30%] opacity-70 '>
+            Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique
+            lectus sit natoque eget mattis magna.
+          </p>
         </div>
-    );
+        <div className='flex-centered flex-row gap-8 py-16 mx-auto'>
+          {data?.map((d) => (
+            <div
+              key={d?.key}
+              className={`flex flex-row items-start text-start rounded-3xl gap-4 max-w-[500px]  px-6 py-8 ${d?.key === 1 ? 'border bg-white' : 'bg-primary text-white'} `}
+            >
+              <div>
+                <img className='w-18' src={d?.image} alt='icon' />
+              </div>
+              <div className=''>
+                <h3 className='font-bold text-xl font-primary'>{d?.heading}</h3>
+                <p className={`font-primary mt-4 max-w-96 ${d?.key === 1 ? 'text-[#49494B]' : 'text-white'}`}>
+                  {d?.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <section>
+          <div className='grid grid-cols-3 divide-x-2 divide-black p-9 mt-8 text-center '>
+            {stats?.map((d) => (
+              <div key={d?.key} className=''>
+                <p className='text-5xl font-bold font-primary'>{formatNumber(d?.stat)}%</p>
+                <p className='font-primary'>{d?.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Container>
+    </div>
+  );
 }
-export default Stats
+export default Stats;

@@ -15,13 +15,13 @@ function AboutUs() {
     <div>
       <Header />
       <Container>
-        <div className='py-9 mt-8 flex items-start gap-9 md:gap-12 lg: text-secondary'>
-          <div className='flex flex-col gap-4  '>
+        <div className='py-9 mt-8 flex md:items-start items-center justify-center md:flex-row flex-col gap-9 lg:gap-0 lg: text-secondary'>
+          <div className='flex flex-col md:items-start items-center md:justify-start justify-center gap-4 md:w-1/2 '>
             <h3 className='text-primary font-normal font-primary text-2xl '>~ WHO WE ARE</h3>
-            <h1 className='font-bold text-5xl  font-primary md:max-w-[600px]'>
+            <h1 className='font-bold md:text-5xl text-2xl mx-auto md:mx-0 font-primary md:max-w-[600px] max-w-[480px]'>
               For over 20 years, the founding members of IVYHOLD
             </h1>
-            <img className='w-96' src={aboutImg} alt='' />
+            <img className='w-[420px]' src={aboutImg} alt='' />
           </div>
 
           <div>
@@ -31,9 +31,11 @@ function AboutUs() {
       </Container>
       <Stats />
       <QueriesSection />
-      <ConsultantsSection />
-      <BlogSection />
-      <NewsletterSection />
+      <Container>
+        <ConsultantsSection />
+        <BlogSection />
+        <NewsletterSection />
+      </Container>
     </div>
   );
 }
