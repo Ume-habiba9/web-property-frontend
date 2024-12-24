@@ -7,7 +7,6 @@ import NewsletterSection from "components/layout/components/newsletter-section"
 function Blogs() {
     return (
         <div>
-            {/* gonna add every section here */}
             <AllBlogsSection />
             <Stats/>
             <QueriesSection/>

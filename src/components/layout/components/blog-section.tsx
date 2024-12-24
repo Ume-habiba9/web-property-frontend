@@ -79,15 +79,13 @@ function BlogSection({ limit }: BlogSectionProps) {
             content: "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum"
         }
     ]
-    // Function to handle blog click
-    const [selectedBlog, setSelectedBlog] = useState<any>(null); // State to track the selected blog
+    const [selectedBlog, setSelectedBlog] = useState<any>(null);
     const handleBlogClick = (blog: any) => {
-        setSelectedBlog(blog); // Set the selected blog
+        setSelectedBlog(blog); 
     };
 
-    // If a blog is selected, show the BlogDetail component
     const goBackToList = () => {
-        setSelectedBlog(null); // Reset the selected blog to show the blog list
+        setSelectedBlog(null); 
     };
     if (selectedBlog) {
         return <SingleArticle goBack={goBackToList} />;
