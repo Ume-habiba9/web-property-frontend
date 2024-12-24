@@ -10,7 +10,7 @@ import ServiceDetails from "./components/service-details"
 
 function Services() {
     return (
-        <div>
+        <div> 
             <HeroSection/>
             <ServicesSection/>
             <SectorsSection/>
