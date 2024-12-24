@@ -7,8 +7,8 @@ import aboutImg from 'assets/images/about2.png';
 
 import Header from './components/header';
 import OurValues from './components/ourvalues';
-import QueriesSection from './components/queriesSection';
-import Stats from './components/stats';
+import QueriesSection from 'components/layout/components/queriesSection';
+import Stats from 'components/layout/components/stats';
 
 function AboutUs() {
   return (
@@ -33,7 +33,7 @@ function AboutUs() {
       <QueriesSection />
       <Container>
         <ConsultantsSection />
-        <BlogSection />
+        <BlogSection limit={3}/>
         <NewsletterSection />
       </Container>
     </div>
