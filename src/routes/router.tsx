@@ -6,8 +6,9 @@ import Layout from 'components/layout/layout';
 
 import ErrorBoundary from 'routes/error-boundary';
 
-import Home from 'pages/home/home';
 import AboutUs from 'pages/about/about_us';
+import Home from 'pages/home/home';
+
 import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
 import Blogs from 'pages/blogs/blogs';

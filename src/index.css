@@ -71,3 +71,8 @@ p {
 .bg-gradient-primary {
   background: linear-gradient(80deg, #7d151e -32.23%, #fd1e28 111.4%);
 }
+
+.bg-form-general {
+  fill: rgba(28, 28, 30, 0.91);
+  backdrop-filter: blur(42.235198974609375px);
+}

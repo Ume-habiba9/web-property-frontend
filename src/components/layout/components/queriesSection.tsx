@@ -1,73 +1,88 @@
-import querybg from 'assets/images/querybg.png'
-import { Button, Form, Input } from 'antd';
+import { Button, Col, Form, Input, Row } from 'antd';
+
+import Container from 'components/core-ui/container/container';
+
+import querybg from 'assets/images/querybg.png';
+
 function QueriesSection() {
   return (
-    <section className='relative h-screen w-screen bg-cover bg-center flex flex-row   justify-center py-20 text-white gap-x-28'
-
+    <section
+      className='relative bg-cover bg-center pt-24 pb-10 text-white '
       style={{ backgroundImage: `url(${querybg})` }}
     >
-      <h1 className='font-medium text-7xl w-1/3'>Lorem ipsum
-        dolor sit amet sit
-        consectetur. </h1>
-      <div className="bg-[#1C1C1EE8] text-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Have Questions?</h2>
-        <Form
-          layout="vertical"
-          // onFinish={onFinish}
-          className="space-y-4 text-white"
-          requiredMark={false}
-        >
-          <Form.Item
-            label={<span className="text-white">Full Name</span>}
-            name="fullName"
-          >
-            <Input placeholder="John Doe"
-              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent" />
-          </Form.Item>
-          <Form.Item
-            label={<span className="text-white">Phone Number</span>}
-            name="phoneNumber"
-            rules={[
-              { pattern: /^\+?\d{1,4}[\d\s]+$/, message: 'Invalid phone number' },
-            ]}
-          >
-            <Input  placeholder="+123 456 78910"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent" />
-          </Form.Item>
-          <Form.Item
-            label={<span className="text-white">Email</span>}
-            name="email"
-            rules={[
-              { required: true, message: 'Please enter your email' },
-              { type: 'email', message: 'Invalid email address' },
-            ]}
-          >
-            <Input placeholder="john@example.com"   className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent"/>
-          </Form.Item>
-          <Form.Item
-            label={<span className="text-white">Query</span>}
-            name="query"
-            rules={[{ required: true, message: 'Please enter your query' }]}
-          >
-            <Input.TextArea
-              placeholder="Enter your query here..."
-              className="rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent"
-                            rows={4}
-            />
-          </Form.Item>
-          <Form.Item>
-            <Button
-              // type="primary"
-              htmlType="submit"
-              className="w-full bg-[#D81C26] border-none text-white font-semibold rounded-md"
+      <Container>
+        <div className='flex flex-row items-start justify-around mt-6'>
+          <h1 className='font-medium text-7xl max-w-[450px] font-primary'>
+            Lorem ipsum dolor sit amet sit consectetur.{' '}
+          </h1>
+          <div className='bg-form-general bg-[#1C1C1EE8] bg-opacity-5 text-white px-8 pt-14 pb-6 rounded-3xl shadow-lg w-full max-w-[400px] border border-primary'>
+            <h2 className='text-2xl font-bold mb-6 text-center font-primary'>Have Questions?</h2>
+            <Form
+              layout='vertical'
+              // onFinish={onFinish}
+              className=' text-white'
+              requiredMark={false}
             >
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
-
-
+              <Row gutter={12}>
+                <Col span={12}>
+                  <Form.Item label={<span className='text-white font-primary'>Full Name</span>} name='fullName'>
+                    <Input
+                      placeholder='John Doe'
+                      className='rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent'
+                    />
+                  </Form.Item>
+                </Col>
+                <Col span={12}>
+                  <Form.Item
+                    label={<span className='text-white font-primary'>Phone Number</span>}
+                    name='phoneNumber'
+                    rules={[{ pattern: /^\+?\d{1,4}[\d\s]+$/, message: 'Invalid phone number' }]}
+                  >
+                    <Input
+                      placeholder='+123 456 78910'
+                      className='rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent'
+                    />
+                  </Form.Item>
+                </Col>
+              </Row>
+              <Form.Item
+                label={<span className='text-white font-primary'>Email</span>}
+                name='email'
+                rules={[
+                  { required: true, message: 'Please enter your email' },
+                  { type: 'email', message: 'Invalid email address' },
+                ]}
+              >
+                <Input
+                  placeholder='john@example.com'
+                  className='rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent'
+                />
+              </Form.Item>
+              <Form.Item
+                label={<span className='text-white font-primary'>Query</span>}
+                name='query'
+                rules={[{ required: true, message: 'Please enter your query' }]}
+              >
+                <Input.TextArea
+                  placeholder='Enter your query here...'
+                  className='rounded-md border-[#C2C2C2] hover:bg-transparent focus:bg-transparent text-white placeholder-[#C2C2C2] bg-transparent'
+                  rows={4}
+                />
+              </Form.Item>
+              <Form.Item>
+                <Button
+                  // type="primary"
+                  htmlType='submit'
+                  className='w-full py-6 bg-primary border-none text-white font-semibold rounded-md'
+                >
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }
-export default QueriesSection
+export default QueriesSection;
