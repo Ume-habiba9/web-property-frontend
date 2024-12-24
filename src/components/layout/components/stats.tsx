@@ -17,26 +17,33 @@ function Stats() {
     };
     const formatNumber = (num: number): string => num.toLocaleString("en-US");
     return (
-        <div className='relative h-screen w-screen bg-cover bg-center flex flex-col items-center justify-center gap-4'
+        <div className='relative h-screen w-screen bg-cover bg-center mx-auto flex flex-col items-center justify-center gap-4'
             style={{
                 backgroundImage: `url(${statsbg})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
             }}>
-            <div className='flex flex-row align-center gap-9 py-9 justify-between px-28'>
-                <h2 className='font-bold text-2xl w-8/12'>
-                    The highest level of service from IVYHOLD's best agents
-                </h2>
-                <p className=' w-2/3 font-normal text-xl'>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus sit natoque eget mattis magna.</p>
+            <div className='flex flex-row items-center gap-56 px-56  justify-center  text-left'>
+                <div className='text-left mx-auto font-primary font-bold text-2xl'>
+                    <h2>
+                        The highest level of service from IVYHOLD's best agents
+                    </h2>
+
+                </div>
+                <div className='w-2/3 font-normal text-xl'>
+                    <p className='text-[#4D5461]'>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus sit natoque eget mattis magna.</p>
+                </div>
             </div>
-            <div className='flex flex-row align-center gap-56 py-9 px-28'>
-                <div className='flex flex-row bg-white rounded-3xl p-6  w-1/3'>
+            <div className='flex flex-row items-center justify-center gap-64 py-9 px-28'>
+                <div className='flex flex-row bg-white rounded-3xl p-6 w-1/3'>
                     <div>
                         <img className='' src={icon1} alt="" /></div>
                     <div>
                         <h3 className='font-bold text-xl font-bold text-xl p-4'>
                             Meet your local luxury agent</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .</p>            </div>
+                        <p className='text-[#4D5461]'>Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. Tristique lectus .</p>
+
+                    </div>
 
                 </div>
                 <div className=' p-6 leading-9 text-white bg-primary rounded-3xl w-1/3'>

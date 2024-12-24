@@ -1,8 +1,8 @@
 import Header from "./components/header"
 import aboutImg from 'assets/images/about2.png'
 import OurValues from "./components/ourvalues"
-import Stats from "./components/stats"
-import QueriesSection from "./components/queriesSection"
+import Stats from "../../components/layout/components/stats"
+import QueriesSection from "../../components/layout/components/queriesSection"
 import ConsultantsSection from "components/layout/components/consultants-section"
 import NewsletterSection from "components/layout/components/newsletter-section"
 import BlogSection from "components/layout/components/blog-section"
@@ -27,7 +27,7 @@ function AboutUs() {
       <Stats />
       <QueriesSection />
       <ConsultantsSection />
-      <BlogSection/>
+      <BlogSection limit={3}/>
       <NewsletterSection />
     </div>
   )
