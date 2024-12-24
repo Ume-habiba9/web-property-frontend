@@ -118,7 +118,10 @@ function BlogSection({ limit }: BlogSectionProps) {
                     ))
                 }
             </div>
-            <Pagination align='center' total={50} pageSize={6} />
+            {
+                displayedBlogs.length > 6 &&
+                <Pagination align='center' total={50} pageSize={6} />
+            }
         </section>
     )
 }
