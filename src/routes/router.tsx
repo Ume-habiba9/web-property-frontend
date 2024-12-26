@@ -13,6 +13,7 @@ import { PrivateRoutes } from './private-routes';
 import WithSuspense from './with-suspense';
 import Blogs from 'pages/blogs/blogs';
 import Services from 'pages/services/services';
+import SellWithUs from 'pages/selling/sell-with-us';
 
 function AppRoutes() {
   // const { currentUser } = useAuth();
@@ -24,7 +25,8 @@ function AppRoutes() {
         <Route path='/home' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/blogs' element={<Blogs />} />
-        <Route path='/service' element={<Services/>}/>
+        <Route path='/service' element={<Services />} />
+        <Route path='/sell-with-us' element={<SellWithUs />} />
         <Route path='logout' element={<SignOut />} />
 
         {currentUser ? (
