@@ -5,7 +5,7 @@ import TwitterIcon from 'assets/icons/twitter-icon.svg?react';
 
 function ContactUs() {
     return (
-        <div className="p-7">
+        <div className="p-7  border-b border-[#C2C2C2] mb-12">
             <div className="flex flex-row justify-around p-9">
                 <div className="text-left max-w-[65%]">
                     <span className="font-medium text-xl">Have Question In mind?</span>
