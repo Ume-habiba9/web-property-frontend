@@ -11,6 +11,7 @@ import Blogs from 'pages/blogs/blogs';
 import ContactUs from 'pages/contact/contact-us';
 import FindTheRightProperty from 'pages/find -right-property/find-right-property';
 import Home from 'pages/home/home';
+import SellWithUs from 'pages/selling/sell-with-us';
 import Services from 'pages/services/services';
 
 import { PrivateRoutes } from './private-routes';
@@ -27,6 +28,7 @@ function AppRoutes() {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/service' element={<Services />} />
+        <Route path='/sell-with-us' element={<SellWithUs />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/ftrp' element={<FindTheRightProperty />} />
         <Route path='logout' element={<SignOut />} />
