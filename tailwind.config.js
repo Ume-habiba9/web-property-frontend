@@ -38,7 +38,7 @@ export default {
       fontFamily: {
         primary: ['Pangea Afrikan Text Trial', 'sans-serif'],
         secondary: ['Circular Std Book', 'sans-serif'],
-        tertiary: ['Source Serif Pro', 'serif'], 
+        tertiary: ['Source Serif Pro', 'serif'],
       },
 
       screens: {

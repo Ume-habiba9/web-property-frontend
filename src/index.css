@@ -77,10 +77,10 @@ p {
   backdrop-filter: blur(42.235198974609375px);
 }
 .ant-carousel .slick-dots li button {
-  height: 7px; 
-background: #D9D9D9
+  height: 7px;
+  background: #d9d9d9;
 }
 
 .ant-carousel .slick-dots li.slick-active button {
-  background:#FD1E28;
+  background: #fd1e28;
 }
