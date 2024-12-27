@@ -4,10 +4,9 @@ import { FaSearch } from 'react-icons/fa';
 
 import Container from 'components/core-ui/container/container';
 
-// Import location icon
-import heroImg1 from 'assets/images/hero1.png';
-import heroImg2 from 'assets/images/hero2.png';
-import heroImg3 from 'assets/images/hero3.png';
+interface IProps {
+  images: string[];
+}
 
 const searchTabs = [
   {
@@ -24,18 +23,17 @@ const searchTabs = [
   },
 ];
 
-function HeroSection() {
+function HeroSection({ images }: IProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSearch, setSelectedSearch] = useState(1);
 
-  const images = [heroImg1, heroImg2, heroImg3];
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on component unmount
+    if (images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 3 seconds
+      return () => clearInterval(interval);
+    }
   }, [images.length]);
 
   return (
