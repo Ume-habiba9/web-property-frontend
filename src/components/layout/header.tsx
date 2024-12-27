@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaRegCircleUser } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
 
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
@@ -31,20 +32,27 @@ export default function Header() {
       <div className='max-w-[1650px] mx-auto md:px-12 px-5 '>
         <header className='flex md:justify-evenly justify-between items-center py-6 gap-2'>
           <div className='flex-centered lg:gap-4 gap-2'>
-            <div className='flex items-end justify-start text-end space-y-0 leading-none lg:text-2xl text-xl font-bold'>
+            <NavLink
+              to={'/'}
+              className='flex items-end justify-start text-end space-y-0 leading-none lg:text-2xl text-xl font-bold'
+            >
               <span className='text-primary'>IVY</span>
               <LogoIcon className='text-primary lg:h-[40px] h-[30px]' />
               OLD
-            </div>
+            </NavLink>
           </div>
 
           {/* Desktop Navigation */}
           <div className='hidden md:flex-centered lg:gap-10 gap-4'>
             <nav className='flex lg:space-x-7 space-x-2'>
               {links?.map((d) => (
-                <a href={d.ref} className='hover:font-semibold font-primary'>
+                <NavLink
+                  key={d.ref}
+                  to={d.ref}
+                  className={({ isActive }) => `${isActive ? 'font-semibold' : ''} hover:font-semibold font-primary`}
+                >
                   {d.label}
-                </a>
+                </NavLink>
               ))}
             </nav>
             <div className='flex-centered lg:gap-2 gap-1'>
@@ -79,10 +87,15 @@ export default function Header() {
                 {/* Navigation Links */}
                 <nav className='flex flex-col space-y-6 pr-6 mt-4'>
                   {links?.map((d) => (
-                    <a href={d.ref} className='flex justify-between items-center'>
+                    <NavLink
+                      to={d.ref}
+                      className={({ isActive }) =>
+                        `${isActive ? 'font-semibold' : ''}flex justify-between items-center`
+                      }
+                    >
                       {d.label}
                       {/* {theme === 'dark' ? <WhiteArrow /> : <BlackArrow />} */}
-                    </a>
+                    </NavLink>
                   ))}
                 </nav>
                 {/* Launch dAPP button */}

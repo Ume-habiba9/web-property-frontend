@@ -2,12 +2,12 @@ import { Button, Col, Form, Input, Row } from 'antd';
 
 import Container from 'components/core-ui/container/container';
 
-import querybg from 'assets/images/querybg.png';
+import querybg from 'assets/images/form-lead.png';
 
 function QueriesSection() {
   return (
     <section
-      className='relative bg-cover bg-center pt-24 pb-10 text-white '
+      className='relative bg-cover bg-bottom pt-24 pb-10 text-white '
       style={{ backgroundImage: `url(${querybg})` }}
     >
       <Container>

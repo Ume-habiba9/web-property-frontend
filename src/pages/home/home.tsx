@@ -2,8 +2,7 @@ import Container from 'components/core-ui/container/container';
 import BlogSection from 'components/layout/components/blog-section';
 import ConsultantsSection from 'components/layout/components/consultants-section';
 import NewsletterSection from 'components/layout/components/newsletter-section';
-
-import QueriesSection from 'components/layout/components/queriesSection';;
+import QueriesSection from 'components/layout/components/queriesSection';
 import Stats from 'components/layout/components/stats';
 
 import PropertySection from './components/PropertySection';
@@ -26,7 +25,7 @@ function Home() {
       <QueriesSection />
       <Container>
         <ConsultantsSection />
-        <BlogSection />
+        <BlogSection limit={3} />
         <NewsletterSection />
       </Container>
     </div>

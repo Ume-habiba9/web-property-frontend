@@ -5,12 +5,15 @@ import { Divider } from 'antd';
 
 import Container from 'components/core-ui/container/container';
 
-import ElipseIcon from 'assets/icons/Ellipse 118.svg?react';
 import BedRedIcon from 'assets/icons/bedRedIcon.svg?react';
 import HomeRedIcon from 'assets/icons/homeWhiteIcon.svg?react';
 import LandSizeIcon from 'assets/icons/measureIconRED.svg?react';
 import BathTubIcon from 'assets/icons/tubRedIcon.svg?react';
+import arrowImg from 'assets/images/arrow.png';
 import cardImg from 'assets/images/cardImg.png';
+import dollarImg from 'assets/images/dollar.png';
+import homeImg from 'assets/images/home.png';
+import locationImg from 'assets/images/location.png';
 import mainImg from 'assets/images/mainImg.png';
 
 const iconsData = [
@@ -49,25 +52,25 @@ const tabs = [
 const propertyFeatures = [
   {
     key: 1,
-    icon: ElipseIcon,
+    icon: homeImg,
     heading: 'Property Insurance',
     text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla ',
   },
   {
     key: 2,
-    icon: ElipseIcon,
+    icon: dollarImg,
     heading: 'Best Price',
     text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere.',
   },
   {
     key: 3,
-    icon: ElipseIcon,
+    icon: arrowImg,
     heading: 'Lowest Commission',
     text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla ',
   },
   {
     key: 4,
-    icon: ElipseIcon,
+    icon: locationImg,
     heading: 'Overall Control',
     text: 'Lorem ipsum dolor sit amet consectetur. Elementum sagittis fringilla diam tristique posuere. ',
   },
@@ -145,7 +148,7 @@ function TouringSection() {
         <div className='mt-24 flex-centered py-12 gap-8'>
           {propertyFeatures?.map((d) => (
             <div key={d?.key} className='flex items-start justify-center gap-4 flex-col'>
-              <d.icon />
+              <img src={d?.icon} alt='logo' className='w-20' />
               <h1 className='font-primary text-xl font-bold'>{d?.heading}</h1>
               <p className='font-primary text-[#4D5461]'>{d?.text}</p>
             </div>
