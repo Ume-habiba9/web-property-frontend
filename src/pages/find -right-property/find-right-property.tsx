@@ -10,6 +10,9 @@ import heroImg2 from 'assets/images/hero2.png';
 
 import PropertySale from './components/property-rent';
 import PropertyRent from './components/property-rent';
+import PropertySearch from './components/property-search';
+import FindServices from './components/find-services';
+import SellWithUs from './components/sell-with-us';
 
 const images = [heroImg2];
 
@@ -27,6 +30,9 @@ function FindTheRightProperty() {
         <BlogSection limit={3} />
         <NewsletterSection />
       </Container>
+      <PropertySearch />
+      <FindServices />
+      <SellWithUs />
     </div>
   );
 }
